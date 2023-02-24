@@ -1,0 +1,31 @@
+
+@use "../utils/mixins.scss";
+
+.explorer {
+  text-align: center;
+  & h2 {
+    margin-top: 32px;
+    font-size: 24px;
+  }
+  & p {
+    font-size: 16px;
+  }
+  & button {
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    border: 0;
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    cursor: pointer;
+    transition: tronsform 200ms;
+    margin-top: 8px;
+    @include mixins.box-shadow;
+  }
+  & button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+}

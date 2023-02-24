@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2? family= Raleway:wght@100 & family= Shrikhand & display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@400;500&family=Shrikhand&display=swap");
-* ::before ::after {
+*,
+::before ::after {
   box-sizing: border-box;
 }
 
@@ -10,49 +11,29 @@ body {
 }
 
 header {
-  padding: 16px;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  text-align: center;
-  font-family: Shrikhand, "cursive";
-  margin: 0;
-  font-size: 32px;
   position: relative;
   z-index: 1000;
+  padding: 21px 0;
 }
-
-.local {
+header img {
+  width: 160px;
+  height: 54px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
-  font-size: 20px;
-  text-align: center;
-  padding: 20px 16px;
-  background-color: #f3f3f3;
+  margin: 0 auto;
 }
 
-fas local-icon {
-  font-size: 22px;
-}
-
-span.local-text {
-  font: weight 700;
-}
-
-/*explorer*/
 .explorer {
   text-align: center;
 }
-
 .explorer h2 {
   margin-top: 32px;
   font-size: 24px;
 }
-
 .explorer p {
   font-size: 16px;
 }
-
 .explorer button {
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   border: 0;
@@ -64,13 +45,103 @@ span.local-text {
   background-color: #686868;
   cursor: pointer;
   transition: tronsform 200ms;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   margin-top: 8px;
+  box-shadow: 2px 1px 8px -3px rgba(0, 0, 0, 0.25);
 }
-
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
 
-/*# sourceMappingURL=style.css.map */
+.local {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 16px;
+  background-color: #f3f3f3;
+  width: 100%;
+}
+.local.local-icon {
+  margin-right: 8px;
+  font-weight: 900;
+}
+.local.local-text {
+  font: weight 700;
+  font-size: 20px;
+}
+
+.steps {
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
+  background-color: white;
+}
+.steps__content {
+  max-width: 1400px;
+  padding-left: 25px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+.steps h2 {
+  transform: translate(-7px);
+  margin: 10px 0px 25px 0px;
+}
+@media (min-width: 768px) {
+  .steps__content > h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 10px;
+  padding-top: 7px;
+}
+@media (min-width: 768px) {
+  .steps__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.steps__list--icons {
+  display: flex;
+  align-items: baseline;
+  border: solid 1px #f5f5f5;
+  padding: 25px 0px;
+  background-color: #f5f5f5;
+  border-radius: 25px;
+  box-shadow: 2px 1px 8px -3px rgba(0, 0, 0, 0.25);
+}
+.steps__list--icons:hover {
+  transform: scale(1.06);
+  opacity: 1;
+  cursor: pointer;
+  transition-duration: 180ms;
+  background-color: hsl(279deg, 100%, 94%);
+}
+.steps__list--icons .number {
+  font-weight: bold;
+  padding: 5px;
+  border: solid 1px #9356DC;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: absolute;
+  transform: translate(-12px, -5px);
+}
+.steps__list--icons i {
+  margin-left: 2.8rem;
+  margin-right: 1.4rem;
+  color: #787878;
+}
+.steps__list--icons p {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

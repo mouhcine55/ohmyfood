@@ -1,0 +1,28 @@
+.explorer {
+  text-align: center;
+}
+.explorer h2 {
+  margin-top: 32px;
+  font-size: 24px;
+}
+.explorer p {
+  font-size: 16px;
+}
+.explorer button {
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  border: 0;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  cursor: pointer;
+  transition: tronsform 200ms;
+  margin-top: 8px;
+  box-shadow: 2px 1px 8px -3px rgba(0, 0, 0, 0.25);
+}
+.explorer button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}/*# sourceMappingURL=explorer.css.map */

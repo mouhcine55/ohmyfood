@@ -1,0 +1,12 @@
+@use "./colors.scss";
+
+@mixin gradient($opacity) {
+    background-image: linear-gradient(to top,rgba(147,86,220,$opacity),rgba(255,121,218,$opacity));
+}
+@mixin box-shadow {
+    box-shadow: 2px 1px 8px -3px rgba(0,0,0,.25);
+}
+
+@mixin transform-zoom {
+    transform: scale(1.06);
+}

@@ -1,0 +1,19 @@
+.local {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 16px;
+  background-color: #f3f3f3;
+  width: 100%;
+}
+.local.local-icon {
+  margin-right: 8px;
+  font-weight: 900;
+}
+.local.local-text {
+  font: weight 700;
+  font-size: 20px;
+}/*# sourceMappingURL=local.css.map */

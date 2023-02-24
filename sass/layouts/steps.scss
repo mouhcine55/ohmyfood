@@ -1,0 +1,79 @@
+@use "../utils/mixins.scss";
+@use "../utils/colors.scss";
+@use "../utils/variables.scss";
+
+.steps {
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+    background-color: white;
+    &__content {
+        max-width: 1400px;
+        padding-left: 25px;
+        padding-right: 20px;
+        margin: 0 auto;
+    }
+    h2 {
+        transform: translate(-7px);
+        margin: 10px 0px 25px 0px;
+    }
+    &__content > h2 {
+        @media( min-width: variables.$breakpoint) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        border-radius: 10px;
+        padding-top: 7px;
+        @media( min-width: variables.$breakpoint) {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    &__list--icons {
+        display: flex;
+        align-items: baseline;
+        border: solid 1px colors.$lightgray;
+        padding: 25px 0px;
+        background-color: colors.$lightgray;
+        border-radius: 25px;
+        @include mixins.box-shadow;
+        &:hover {
+            @include mixins.transform-zoom;
+            opacity: 1;
+            cursor: pointer;
+            transition-duration: 180ms;
+            background-color: hsl(279, 100%, 94%);
+        }
+    }
+
+    &__list--icons .number {
+        font-weight: bold;
+        padding: 5px;
+        border: solid 1px colors.$purple;
+        background-color: colors.$purple;
+        color: white;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        position: absolute;
+        transform: translate(-12px, -5px);
+    }
+
+    &__list--icons i {
+        margin-left: 2.8rem;
+        margin-right: 1.4rem;
+        color: colors.$darkgray;
+    }
+
+    &__list--icons p {
+        font-weight: bold;
+    }
+}
