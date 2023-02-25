@@ -1,86 +1,81 @@
-@use "./sass/layouts/menus.scss";
-//*#homepage*//
-.menus {
-    background-color: #f6f6f6;
-    padding-top: 1.5rem;
-    padding-bottom: 3.5rem;
-&_all {
-    background-color: #f6f6f6;
-}
-img {
-   width: 100%;
-   max-height: 325px;
-   min-height: 200px;
-   object-fit: cover;
-   max-width: 1400px;
-   @media (min-width: variables.$breakpoint) {
-    min-height: 245px;
-   }
-}
-  &_cards {
-    display: grid;
-    gap: 1.3rem;
-    margin-right: 20px;
-    margin-left: 20px;
-   @media (min-width: variables.$breakpoint) {
-    grid-template-columns: repeat(4,1fr);
-  }
-}
-  .new {
-    position: relative;
-  }
-  .new::before {
-    content: "Nouveau";
-    position: absolute;
-    height:  2rem;
-    width: 5rem;
-    background-color: colors.$color-tertiary;
-    color: darken(colors.$color-tertiary,50%);
-    display: grid;
-    place-items: center;
-    right: 1rem;
-    top: 1rem;
-  }
-}
-.card {
-    & _image {
-        height: 12rem;
-        width: 100%;
-        border: 0 solid transparent;
-        border-radius: 1rem 1rem 0 0;
-        box-shadow: none;
-        object-fit: cover;   
-    } 
-    &_description {
-        @include mixins.heart-animated;
-        background-color: white;
-        border-radius: 0 0 1.5rem 1.5rem;
-        h3{
-            padding-top: 0.8rem;
-            padding-left: 1rem;
-            font-weight: 700;
-        }
-        p {
-            padding: 0.4rem 0 1rem 0;
-            padding-left: 1rem;
-        }
-    }
-}
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+@use "../utils/mixins.scss";
 
-//*page-resto*//
-h3 {
-    font-weight: 400;
-    position: relative;
-    text-transform: uppercase;
-    margin: 20px 0 15px 12px;
+#homepage {
+    .menus {
+        background-color: #f6f6f6;
+        padding-top: 1.5rem;
+        padding-bottom: 3.5rem;
+        h2 {
+            margin: 20px 0px 20px 20px;
+            @media( min-width: variables.$breakpoint) {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }        
+        }
+        &__all {
+            background-color: #f6f6f6;
+        }
+        img {
+            width: 100%;
+            max-height: 325px;
+            min-height: 200px;
+            object-fit: cover;    
+            max-width: 1400px;
+            @media (min-width: variables.$breakpoint) {
+                min-height: 245px;
+            }
+        }
+        &__cards {
+            display: grid;
+            gap: 1.3rem;
+            margin-right: 20px;
+            margin-left: 20px;
+            @media (min-width : variables.$breakpoint) {
+                grid-template-columns: repeat(2,1fr);
+            }
+            .new {
+                position: relative;
+            }
+            .new::before {
+                content: "Nouveau";
+                position: absolute;
+                height: 2rem;
+                width: 5rem;
+                background-color: colors.$color-tertiary;
+                display: grid;
+                color: colors.$green-font;
+                place-items: center;
+                right: 1rem;
+                top: 1rem;
+                font-weight: 500;
+            }
+        }
+        .card {
+            &__image {
+                    height: 12rem;
+                    width: 100%;
+                    border: 0 solid transparent;
+                    border-radius: 1rem 1rem 0 0;
+                    box-shadow: none;
+                    object-fit: cover;
+                }
+            &__description {
+                @include mixins.heart-animated;
+                background-color: white;
+                border-radius: 0 0 1.5rem 1.5rem;
+                h3 {
+                    padding-top: 0.8rem;
+                    padding-left: 1rem;
+                    font-weight: 700;
+                }
+                p {
+                    padding: 0.4rem 0 1rem 0;
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }   
 }
-h3::before {
-    content: "";
-    width: 3rem;
-    height: 0.25rem;
-    background-color: #99e2d0;
-    position: absolute;
-    bottom: -7px;
-    left: 0;
-  }
-  

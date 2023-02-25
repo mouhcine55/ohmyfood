@@ -5,7 +5,55 @@
 ::after {
     box-sizing: border-box;
 }
-body{
-    margin: 0px;
-    font-family: "Roboto", sans-serif;
+
+#homepage
+ {
+    margin: 0 auto;
+    font-family: 'roboto', sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.main {
+    padding: 0 7rem;
+    @media (max-width: 1000px) {
+        padding: 0 1rem;
+    }
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    &__description
+        h4 {
+            font-size: 19px;
+       
+        p {
+            font-size: 17px;
+        }
+   }
+}              
+
+.menus
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        opacity: 1;
+        transition-duration: 180ms;
+        cursor: pointer;
+        transform: scale(1.02);
+    }
 }

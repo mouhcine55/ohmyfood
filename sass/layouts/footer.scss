@@ -1,0 +1,48 @@
+@use "../utils/colors.scss";
+
+
+
+.footer {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: #000000b5;
+        }
+
+    &__logo {
+        font-family: "Shrikhand", "cursive";
+        color: white;
+        margin: 6px 6px 10px;
+        font-size: large;
+    }
+
+    &__listing {
+        list-style: none;
+        padding-left: 8px;
+        margin: 6px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+
+    &__link {
+        text-decoration: none;
+        color: white;
+    }
+    
+
+    &__icon {
+        width: 1rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.fa-utensils {
+    margin-right: 14px;
+}
+
+.fa-handshake-angle {
+    margin-right: 9px;
+}
