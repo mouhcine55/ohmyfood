@@ -5,13 +5,9 @@
 }
 #homepage .menus h2 {
   margin: 20px 0px 20px 20px;
-}
-@media (min-width: 768px) {
-  #homepage .menus h2 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+  align-items: center;
+  flex-direction: column;
+  display: flex;
 }
 #homepage .menus__all {
   background-color: #f6f6f6;
@@ -23,11 +19,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 1400px;
-}
-@media (min-width: 768px) {
-  #homepage .menus img {
-    min-height: 245px;
-  }
+  min-height: 245px;
 }
 #homepage .menus__cards {
   display: grid;
@@ -35,9 +27,16 @@
   margin-right: 20px;
   margin-left: 20px;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   #homepage .menus__cards {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  #homepage .menus__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 #homepage .menus__cards .new {
@@ -91,6 +90,11 @@
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
+@media (min-width: 992px) {
+  #homepage .menus .card__description::before {
+    right: 9px;
+  }
+}
 #homepage .menus .card__description::after {
   display: inline-block;
   font-style: normal;
@@ -114,6 +118,11 @@
   opacity: 0;
   color: transparent;
   font-weight: 900;
+}
+@media (min-width: 992px) {
+  #homepage .menus .card__description::after {
+    right: 9px;
+  }
 }
 #homepage .menus .card__description:hover::after {
   opacity: 1;

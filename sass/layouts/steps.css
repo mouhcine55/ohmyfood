@@ -13,24 +13,22 @@
   transform: translate(-7px);
   margin: 10px 0px 25px 0px;
 }
-@media (min-width: 768px) {
-  .steps__content > h2 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+.steps__content > h2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .steps__list {
-  display: flex;
   flex-direction: column;
   gap: 1.5rem;
   border-radius: 10px;
   padding-top: 7px;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
 }
 @media (min-width: 768px) {
   .steps__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 .steps__list--icons {

@@ -1,6 +1,11 @@
+@use "../utils/colors.scss";
 
+body{
+margin: 0;
+padding: 0;
+}
 
-header {  
+.header {  
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     position: relative;
     z-index: 1000;
@@ -11,6 +16,22 @@ header {
         display: flex;
         align-items: center;
         margin: 0 auto;
-        }
-    
-}
+    }
+    &__logo {
+        text-align: center;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0.25rem 0.25rem 0.5rem colors.$darkgray;
+        font-family: "Shrikhand", "cursive";
+    }
+    &__container > a {
+        transform: translate(21px, 19px);
+        font-size: 20px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+   
+}       

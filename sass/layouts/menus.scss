@@ -9,11 +9,9 @@
         padding-bottom: 3.5rem;
         h2 {
             margin: 20px 0px 20px 20px;
-            @media( min-width: variables.$breakpoint) {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-            }        
+            align-items: center;
+            flex-direction: column;
+            display: flex;
         }
         &__all {
             background-color: #f6f6f6;
@@ -24,18 +22,21 @@
             min-height: 200px;
             object-fit: cover;    
             max-width: 1400px;
-            @media (min-width: variables.$breakpoint) {
-                min-height: 245px;
-            }
+            min-height: 245px;
         }
         &__cards {
             display: grid;
             gap: 1.3rem;
             margin-right: 20px;
             margin-left: 20px;
-            @media (min-width : variables.$breakpoint) {
+            @media only screen and ( min-width: variables.$breakpoint-tablette) and ( max-width: variables.$breakpoint-desktop ) {
+                display: grid;
                 grid-template-columns: repeat(2,1fr);
-            }
+                }
+            @media( min-width: variables.$breakpoint-desktop) {
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                }
             .new {
                 position: relative;
             }

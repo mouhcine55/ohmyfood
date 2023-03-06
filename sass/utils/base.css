@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-#homepage {
+#homepage,
+#page-resto {
   margin: 0 auto;
   font-family: "roboto", sans-serif;
 }

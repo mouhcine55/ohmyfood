@@ -1,0 +1,125 @@
+@use "../utils/mixins.scss";
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+@use "../utils/base.scss";
+@use "../layouts/footer.scss";
+
+body {
+    background-color: colors.$lightgray;
+}
+
+#page-resto {
+    font-family: 'roboto', sans-serif;
+    .font__image img {
+        display: block;
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+    }
+    .resto__content {
+        margin-right: 3rem;
+        margin-left: 3rem;
+    }
+    .resto__title {
+        margin-top: -2rem;
+        h2 {
+            font-family: "Shrikhand", "cursive";
+            padding: 2rem 0 2rem 2rem;    
+            background-color: colors.$lightgray;
+            font-size: 1.7rem;
+            font-weight: 600;
+            @include mixins.heart-animated
+        }
+    }
+    
+    .resto-main {
+        padding: 0 0.3rem;
+    }
+    
+    .menus {
+        // margin-top: -18px;
+        @media (min-width : 1024px) {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 1rem;
+        }
+        &__name {  
+            overflow: hidden;
+            .menu-item {
+                background-color: white;
+                display: flex;
+                overflow: hidden;
+                margin: 0.5rem;
+                border-radius: 1rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex: 1;
+                cursor: pointer;
+                @include mixins.box-shadow;
+                &__description {
+                    padding: 1rem;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    font-weight: 300;
+                    h4, 
+                    p {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+                &__price {
+                    margin-left: auto;
+                    font-weight: 900;
+                    padding: 1rem;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                &__check {
+                    display: grid;
+                    place-items: center;
+                    flex-shrink: 0;
+                    background-color: colors.$color-tertiary;
+                    $button-width: 4rem;
+                    margin-right: -1 * $button-width;
+                    width: $button-width;
+                    transition: margin-right 0.5s;
+                    border-radius: 0 1rem 1rem 0;
+                }
+                i {
+                    $size: 2rem;
+                    display: grid;
+                    place-items: center;
+                    background : white;
+                    height: $size;
+                    width: $size;
+                    border-radius: 1rem;
+                    color: colors.$color-tertiary;
+                }
+                &:hover {
+                    .menu-item__check {
+                        margin-right: 0;
+                    }
+                }   
+            }        
+        }  
+    }
+}
+
+
+.wrappbtn {
+    display: flex;
+    justify-content: center;
+    &__btn {
+        @include mixins.base-button; 
+        margin-top: 2.5rem;
+        margin-bottom: 3.5rem;
+        padding: 0.9rem 3rem;
+        &:hover {
+            @include mixins.hover-button;
+        }
+    }
+}
+    
+  

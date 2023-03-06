@@ -1,4 +1,5 @@
 @use "./colors.scss";
+@use "./variables.scss";
 
 @mixin gradient($opacity) {
     background-image: linear-gradient(to top,rgba(147,86,220,$opacity),rgba(255,121,218,$opacity));
@@ -35,6 +36,9 @@
     border-radius: 2rem;
     &::before {
         @include heart;
+        @media ( min-width: variables.$breakpoint-desktop) {
+            right: 9px;
+        }
     }
     &::after {
         @include heart;
@@ -42,7 +46,9 @@
         opacity: 0;
         color: transparent;
         font-weight: 900;
-
+        @media ( min-width: variables.$breakpoint-desktop) {
+            right: 9px;
+        }
     }
     &:hover::after {
         opacity: 1;

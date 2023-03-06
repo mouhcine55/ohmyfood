@@ -17,25 +17,21 @@
         margin: 10px 0px 25px 0px;
     }
     &__content > h2 {
-        @media( min-width: variables.$breakpoint) {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-    }
-
-    &__list {
         display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__list {
         flex-direction: column;
         gap: 1.5rem;
         border-radius: 10px;
         padding-top: 7px;
-        @media( min-width: variables.$breakpoint) {
+        display: flex;
+        grid-template-columns: repeat(3,1fr);
+        @media ( min-width: variables.$breakpoint-tablette) {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
         }
     }
-
     &__list--icons {
         display: flex;
         align-items: baseline;
@@ -53,7 +49,6 @@
             background-color: hsl(279, 100%, 94%);
         }
     }
-
     &__list--icons .number {
         font-weight: bold;
         padding: 5px;
@@ -67,13 +62,11 @@
         position: absolute;
         transform: translate(-12px, -7px);
     }
-
     &__list--icons i {
         margin-left: 2.8rem;
         margin-right: 1.4rem;
         color: colors.$darkgray;
     }
-
     &__list--icons p {
         font-weight: bold;
     }
