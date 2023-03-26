@@ -8,6 +8,7 @@ body {
   position: relative;
   z-index: 1000;
   padding: 21px 0;
+  background-color: white;
 }
 .header img {
   width: 160px;
