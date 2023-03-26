@@ -672,7 +672,7 @@ body {
     transform: rotate(-270deg);
   }
   100% {
-    transform: rotate(1);
+    transform: rotate(1deg);
   }
 }
 
