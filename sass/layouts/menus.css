@@ -90,9 +90,9 @@
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
   #homepage .menus .card__description::before {
-    right: 26rem;
+    right: 2rem;
   }
 }
 #homepage .menus .card__description::after {
@@ -118,11 +118,6 @@
   opacity: 0;
   color: transparent;
   font-weight: 900;
-}
-@media (min-width: 1440px) {
-  #homepage .menus .card__description::after {
-    right: 26rem;
-  }
 }
 #homepage .menus .card__description:hover::after {
   opacity: 1;
