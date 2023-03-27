@@ -11,6 +11,11 @@
   font-family: "roboto", sans-serif;
 }
 
+@media (min-width: 992px) {
+  #homepage {
+    padding: 1px;
+  }
+}
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -130,7 +135,7 @@ body {
   color: #fff;
   background-color: #686868;
   cursor: pointer;
-  transition: tronsform 200ms;
+  transition: transform 200ms;
   margin-top: 8px;
   box-shadow: 2px 1px 8px -3px rgba(0, 0, 0, 0.25);
 }
@@ -180,7 +185,7 @@ body {
   gap: 16px;
   font-size: 16px;
   text-align: center;
-  padding: 20px 16px;
+  padding: 16px 0;
   background-color: #EAEAEA;
   width: 100%;
 }
@@ -265,6 +270,19 @@ body {
   font-weight: bold;
 }
 
+@media (min-width: 992px) {
+  .steps__list {
+    margin: 0 193px;
+  }
+  .steps__content {
+    padding: 0px;
+    margin: 0px;
+  }
+  .steps__content > h2 {
+    display: inline-block;
+    margin: 0 0 28px 193px;
+  }
+}
 #homepage .menus {
   background-color: #f6f6f6;
   padding-top: 1.5rem;
@@ -293,6 +311,11 @@ body {
   gap: 1.3rem;
   margin-right: 20px;
   margin-left: 20px;
+}
+@media (min-width: 992px) {
+  #homepage .menus__cards {
+    margin-left: 193px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   #homepage .menus__cards {
@@ -400,6 +423,12 @@ body {
   padding-left: 1rem;
 }
 
+@media (min-width: 992px) {
+  #homepage .menus h2 {
+    display: inline-block;
+    margin: 0 0 28px 193px;
+  }
+}
 #page-resto h3 {
   font-weight: 400;
   position: relative;
@@ -453,6 +482,20 @@ body {
   margin-right: 9px;
 }
 
+@media (min-width: 1440px) {
+  .footer__logo {
+    margin-left: 70px;
+  }
+  .footer__listing {
+    flex-direction: row;
+    margin-left: 511px;
+    gap: 40px;
+  }
+  .footer__container {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
 @keyframes appear {
   0% {
     transform: translateY(50%);

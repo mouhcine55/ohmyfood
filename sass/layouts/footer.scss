@@ -1,5 +1,5 @@
 @use "../utils/colors.scss";
-
+@use "../utils/variables.scss";
 
 
 .footer {
@@ -45,4 +45,21 @@
 
 .fa-handshake-angle {
     margin-right: 9px;
+}
+
+@media (min-width: 1440px) {
+    .footer {
+        &__logo {
+            margin-left: 70px;
+        }
+        &__listing {
+            flex-direction: row;
+            margin-left: 511px;
+            gap: 40px;
+        }      
+        &__container {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }   
+    }
 }

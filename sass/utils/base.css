@@ -11,6 +11,11 @@
   font-family: "roboto", sans-serif;
 }
 
+@media (min-width: 992px) {
+  #homepage {
+    padding: 1px;
+  }
+}
 .container {
   max-width: 1400px;
   margin: 0 auto;

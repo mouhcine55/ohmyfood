@@ -12,6 +12,12 @@
     font-family: 'roboto', sans-serif;
 }
 
+@media (min-width: 992px) {
+    #homepage {
+        padding:1px;
+    }   
+}      
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -22,8 +28,8 @@
     @media (max-width: 1000px) {
         padding: 0 1rem;
     }
-
 }
+
 
 h1,
 h2,

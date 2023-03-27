@@ -33,4 +33,19 @@
 
 .fa-handshake-angle {
   margin-right: 9px;
+}
+
+@media (min-width: 1440px) {
+  .footer__logo {
+    margin-left: 70px;
+  }
+  .footer__listing {
+    flex-direction: row;
+    margin-left: 511px;
+    gap: 40px;
+  }
+  .footer__container {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
 }/*# sourceMappingURL=footer.css.map */

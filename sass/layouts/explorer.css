@@ -39,7 +39,7 @@
   color: #fff;
   background-color: #686868;
   cursor: pointer;
-  transition: tronsform 200ms;
+  transition: transform 200ms;
   margin-top: 8px;
   box-shadow: 2px 1px 8px -3px rgba(0, 0, 0, 0.25);
 }

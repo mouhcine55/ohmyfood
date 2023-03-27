@@ -39,7 +39,7 @@
     color: #fff;
     background-color: #686868;
     cursor: pointer;
-    transition: tronsform 200ms;
+    transition: transform 200ms;
     margin-top: 8px;
     @include mixins.box-shadow;
   }
@@ -75,12 +75,14 @@
   }
 }
 
+// Animation disappear loader
 @keyframes disappear {
   to {
       transform: scale(0);
   }
 }
 
+// Animation spin loader
 @keyframes spin {
   to {
       transform: rotate(360deg);

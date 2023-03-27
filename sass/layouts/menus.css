@@ -27,6 +27,11 @@
   margin-right: 20px;
   margin-left: 20px;
 }
+@media (min-width: 992px) {
+  #homepage .menus__cards {
+    margin-left: 193px;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   #homepage .menus__cards {
     display: grid;
@@ -133,6 +138,12 @@
   padding-left: 1rem;
 }
 
+@media (min-width: 992px) {
+  #homepage .menus h2 {
+    display: inline-block;
+    margin: 0 0 28px 193px;
+  }
+}
 #page-resto h3 {
   font-weight: 400;
   position: relative;

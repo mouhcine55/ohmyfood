@@ -71,3 +71,17 @@
         font-weight: bold;
     }
 }
+
+@media (min-width: 992px) {
+    .steps__list {
+        margin: 0 193px;
+    }   
+    .steps__content {
+        padding: 0px;
+        margin: 0px;
+    }
+    .steps__content > h2 {
+        display: inline-block;
+        margin: 0 0 28px 193px;
+    }
+}     
